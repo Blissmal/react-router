@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
 
 const ProfilesPage = () => {
@@ -7,12 +7,13 @@ const ProfilesPage = () => {
     const profiles = [1, 2, 3, 4, 5]
 
     return (
-        <div className='p-5'>
+        <div className='p-5 col'>
             {profiles.map((profile) => (
-                <Link className='row' key={profile} to={`/profiles/${profile}`}>
+                <Link className='' key={profile} to={`/profiles/${profile}`}>
                     Profile: {profile}
                 </Link>
             ))}
+            <Outlet />
         </div>
     )
 }
