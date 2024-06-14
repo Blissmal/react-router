@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.css"
 
 const ProfilesPage = () => {
@@ -9,9 +9,11 @@ const ProfilesPage = () => {
     return (
         <div className='p-5 col'>
             {profiles.map((profile) => (
-                <Link className='' key={profile} to={`/profiles/${profile}`}>
+                <NavLink className={({isActive}) => {
+                    return isActive ? 'text-secondary' : ''
+                }} key={profile} to={`/profiles/${profile}`}>
                     Profile: {profile}
-                </Link>
+                </NavLink>
             ))}
             <Outlet />
         </div>
