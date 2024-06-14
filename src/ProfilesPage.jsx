@@ -6,7 +6,11 @@ const ProfilesPage = () => {
 
     return (
         <div>
-            <h1>Profiles page</h1>
+            {profiles.map((profile) => (
+                <Link key={profile} to={`/profiles/${profile}`}>
+                    Profile: {profile}
+                </Link>
+            ))}
         </div>
     )
 }
