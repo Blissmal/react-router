@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import ProfilesPage from './ProfilesPage.jsx'
+import NotFound from './NotFound.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <>404 NOT FOUND</>
+    errorElement: <NotFound />
   },
   {
     path: '/profiles',
