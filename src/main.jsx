@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import ProfilesPage from './ProfilesPage.jsx'
+import ProfilePage from './ProfilePage.jsx'
 import NotFound from './NotFound.jsx'
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/profiles',
     element: <ProfilesPage />
+  },
+  {
+    path: '/profiles/:profileId',
+    element: <ProfilePage />
   }
 ])
 
